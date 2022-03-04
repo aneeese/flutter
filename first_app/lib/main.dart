@@ -23,7 +23,13 @@ void main() => runApp(MaterialApp(
             child: Container(height: 100)),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          child: const Text("Click"),
+          child: const Text(
+            "Click",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(255, 223, 223, 130)
+            ),
+          ),
           backgroundColor: Colors.teal,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
