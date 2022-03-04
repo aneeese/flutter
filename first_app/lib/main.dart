@@ -14,15 +14,22 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
       body: const Center(
-        child: Text(
-          "Hello fam!",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            color: Colors.grey,
-          ),
+        // child: Text(
+        //   "Hello fam!>>3",
+        //   style: TextStyle(
+        //     fontSize: 20,
+        //     fontWeight: FontWeight.bold,
+        //     letterSpacing: 2.0,
+        //     color: Colors.grey,
+        //   ),
+        // ),
+        child: Image(
+          //image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYIX4fdymadei7FiL-19pxFAWPLEJgQlNEww&usqp=CAU'),
+          image: AssetImage('assests/Image4.jpg'),
         ),
+        // we can directly use these for inserting image either from system or internet
+        // child: Image.asset('assests/Image2.jpg'),
+        // child: Image.network('url');
       ),
       bottomNavigationBar: BottomAppBar(
           shape: const CircularNotchedRectangle(),
