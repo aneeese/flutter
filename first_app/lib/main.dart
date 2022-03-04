@@ -8,7 +8,15 @@ void main() => runApp(MaterialApp(
           centerTitle: true,
         ),
         body: const Center(
-          child: Text("Hello fam!"),
+          child: Text(
+            "Hello fam!",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2.0,
+              color: Colors.grey,
+            ),
+          ),
         ),
         bottomNavigationBar: BottomAppBar(
             shape: const CircularNotchedRectangle(),
