@@ -13,24 +13,47 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.teal,
         centerTitle: true,
       ),
-      body: const Center(
-        // child: Text(
-        //   "Hello fam!>>3",
-        //   style: TextStyle(
-        //     fontSize: 20,
-        //     fontWeight: FontWeight.bold,
-        //     letterSpacing: 2.0,
-        //     color: Colors.grey,
-        //   ),
-        // ),
-        child: Image(
-          //image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYIX4fdymadei7FiL-19pxFAWPLEJgQlNEww&usqp=CAU'),
-          image: AssetImage('assests/Image4.jpg'),
+      body: Center(
+        child: IconButton(
+          onPressed: () {
+            print("Hello");
+          },
+          icon: Icon(Icons.alternate_email),
+          color: Colors.amber,
         ),
-        // we can directly use these for inserting image either from system or internet
-        // child: Image.asset('assests/Image2.jpg'),
-        // child: Image.network('url');
       ),
+      // child: ElevatedButton.icon(
+      //   onPressed: () {},
+      //   icon: Icon(Icons.mail),
+      //   label: Text("Mail me"),
+      //   style: ButtonStyle(
+      //     backgroundColor: MaterialStateProperty.all(Colors.amber),
+      //   ),
+      // ),
+      // child: ElevatedButton(
+      //     onPressed: () {
+      //       print("You clicked me");
+      //     },
+      //     child: Text("Click me")
+      //   ),
+      // ),
+      // child: Icon(
+      //   Icons.airport_shuttle,
+      //   color: Colors.lightBlue,
+      //   size: 50,
+      // ),
+      // child: Text(
+      //   "Hello fam!>>3",
+      //   style: TextStyle(
+      //     fontSize: 20,
+      //     fontWeight: FontWeight.bold,
+      //     letterSpacing: 2.0,
+      //     color: Colors.grey,
+      //   ),
+      // ),
+      // we can directly use these for inserting image either from system or internet
+      // child: Image.asset('assests/Image4.jpg'),
+      // child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYIX4fdymadei7FiL-19pxFAWPLEJgQlNEww&usqp=CAU'),
       bottomNavigationBar: BottomAppBar(
           shape: const CircularNotchedRectangle(),
           child: Container(height: 100)),
