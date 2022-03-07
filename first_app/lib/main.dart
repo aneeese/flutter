@@ -15,23 +15,50 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.teal,
         centerTitle: true,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          const Text("Hello World"),
-          FlatButton(
-            onPressed: (){},
-            color: Colors.amber,
-            child: Text('Click me'),
+          Row(
+            children: <Widget>[
+              Text("Hello"),
+              Text("World"),
+            ],
           ),
           Container(
+            padding: EdgeInsets.all(20),
             color: Colors.cyan,
+            child: Text("One"),
+          ),
+          Container(
             padding: EdgeInsets.all(30),
-            child: Text("Inside container"),
-          )
+            color: Colors.pinkAccent,
+            child: Text("Two"),
+          ),
+          Container(
+            padding: EdgeInsets.all(40),
+            color: Colors.amber,
+            child: Text("Three"),
+          ),
         ],
       ),
+      // body: Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   crossAxisAlignment: CrossAxisAlignment.start,
+      //   children: <Widget>[
+      //     const Text("Hello World"),
+      //     FlatButton(
+      //       onPressed: (){},
+      //       color: Colors.amber,
+      //       child: Text('Click me'),
+      //     ),
+      //     Container(
+      //       color: Colors.cyan,
+      //       padding: EdgeInsets.all(30),
+      //       child: Text("Inside container"),
+      //     )
+      //   ],
+      // ),
       // body: Container(
       //   padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
       //   margin: EdgeInsets.all(30),
