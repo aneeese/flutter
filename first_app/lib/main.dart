@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -13,15 +15,38 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.teal,
         centerTitle: true,
       ),
-      body: Center(
-        child: IconButton(
-          onPressed: () {
-            print("Hello");
-          },
-          icon: Icon(Icons.alternate_email),
-          color: Colors.amber,
-        ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          const Text("Hello World"),
+          FlatButton(
+            onPressed: (){},
+            color: Colors.amber,
+            child: Text('Click me'),
+          ),
+          Container(
+            color: Colors.cyan,
+            padding: EdgeInsets.all(30),
+            child: Text("Inside container"),
+          )
+        ],
       ),
+      // body: Container(
+      //   padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
+      //   margin: EdgeInsets.all(30),
+      //   color: Colors.amber,
+      //   child: Text("Hello"),
+      // ),
+      // body: Center(
+      //   child: IconButton(
+      //     onPressed: () {
+      //       print("Hello");
+      //     },
+      //     icon: Icon(Icons.alternate_email),
+      //     color: Colors.amber,
+      //   ),
+      // ),
       // child: ElevatedButton.icon(
       //   onPressed: () {},
       //   icon: Icon(Icons.mail),
@@ -56,7 +81,7 @@ class Home extends StatelessWidget {
       // child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYIX4fdymadei7FiL-19pxFAWPLEJgQlNEww&usqp=CAU'),
       bottomNavigationBar: BottomAppBar(
           shape: const CircularNotchedRectangle(),
-          child: Container(height: 100)),
+          child: Container(height: 70)),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Text(
