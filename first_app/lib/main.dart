@@ -15,33 +15,64 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.teal,
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Row(
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              Text("Hello"),
-              Text("World"),
-            ],
+          Expanded(
+            flex: 3,
+            child: Image.asset('assests/Image4.jpg')),
+          Expanded(
+            flex: 1,
+              child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.cyan,
+              child: Text("1"),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(20),
-            color: Colors.cyan,
-            child: Text("One"),
+          Expanded(
+            flex: 2,
+              child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.pinkAccent,
+              child: Text("2"),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(30),
-            color: Colors.pinkAccent,
-            child: Text("Two"),
-          ),
-          Container(
-            padding: EdgeInsets.all(40),
-            color: Colors.amber,
-            child: Text("Three"),
+          Expanded(
+            flex: 3,
+              child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.amber,
+              child: Text("3"),
+            ),
           ),
         ],
       ),
+      // body: Column(
+      //   mainAxisAlignment: MainAxisAlignment.end,
+      //   crossAxisAlignment: CrossAxisAlignment.stretch,
+      //   children: <Widget>[
+      //     Row(
+      //       children: <Widget>[
+      //         Text("Hello"),
+      //         Text("World"),
+      //       ],
+      //     ),
+      //     Container(
+      //       padding: EdgeInsets.all(20),
+      //       color: Colors.cyan,
+      //       child: Text("One"),
+      //     ),
+      //     Container(
+      //       padding: EdgeInsets.all(30),
+      //       color: Colors.pinkAccent,
+      //       child: Text("Two"),
+      //     ),
+      //     Container(
+      //       padding: EdgeInsets.all(40),
+      //       color: Colors.amber,
+      //       child: Text("Three"),
+      //     ),
+      //   ],
+      // ),
       // body: Row(
       //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       //   crossAxisAlignment: CrossAxisAlignment.start,
