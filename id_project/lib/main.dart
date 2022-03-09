@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(
@@ -41,17 +43,17 @@ class NinjaCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Anees',
+              'Muhammad Anees',
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 letterSpacing: 2,
-                fontSize: 28,
+                fontSize: 24,
                 fontWeight: FontWeight.bold
               ),
             ),
             SizedBox(height: 30),
             Text(
-              'AGE',
+              'DOB',
               style: TextStyle(
                 color: Colors.grey,
                 letterSpacing: 2,
@@ -59,11 +61,29 @@ class NinjaCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              '19',
+              '16-07-2002',
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 letterSpacing: 2,
-                fontSize: 28,
+                fontSize: 24,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+            SizedBox(height: 30),
+            Text(
+              'CNIC',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              "37302-9591734-1",
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                letterSpacing: 2,
+                fontSize: 24,
                 fontWeight: FontWeight.bold
               ),
             ),
