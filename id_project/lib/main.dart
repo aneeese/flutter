@@ -2,13 +2,17 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-  MaterialApp(
-    home: NinjaCard(),
-  )
-);
+void main() => runApp(MaterialApp(
+      home: NinjaCard(),
+    ));
 
-class NinjaCard extends StatelessWidget {
+class NinjaCard extends StatefulWidget {
+  @override
+  State<NinjaCard> createState() => _NinjaCardState();
+}
+
+class _NinjaCardState extends State<NinjaCard> {
+  int ninjaLevel = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +23,14 @@ class NinjaCard extends StatelessWidget {
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
       ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              ninjaLevel++;
+            });
+          },
+          child: Icon(Icons.add),
+          backgroundColor: Colors.grey[800]),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
         child: Column(
@@ -45,15 +57,14 @@ class NinjaCard extends StatelessWidget {
             Text(
               'Muhammad Anees',
               style: TextStyle(
-                color: Colors.amberAccent[200],
-                letterSpacing: 2,
-                fontSize: 24,
-                fontWeight: FontWeight.bold
-              ),
+                  color: Colors.amberAccent[200],
+                  letterSpacing: 2,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 30),
             Text(
-              'DOB',
+              'CURRENT NINJA LEVEL',
               style: TextStyle(
                 color: Colors.grey,
                 letterSpacing: 2,
@@ -61,31 +72,26 @@ class NinjaCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              '16-07-2002',
+              '$ninjaLevel',
               style: TextStyle(
-                color: Colors.amberAccent[200],
-                letterSpacing: 2,
-                fontSize: 24,
-                fontWeight: FontWeight.bold
-              ),
+                  color: Colors.amberAccent[200],
+                  letterSpacing: 2,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 30),
             Text(
               'CNIC',
-              style: TextStyle(
-                color: Colors.grey,
-                letterSpacing: 2
-              ),
+              style: TextStyle(color: Colors.grey, letterSpacing: 2),
             ),
             SizedBox(height: 10),
             Text(
               "37302-9591734-1",
               style: TextStyle(
-                color: Colors.amberAccent[200],
-                letterSpacing: 2,
-                fontSize: 24,
-                fontWeight: FontWeight.bold
-              ),
+                  color: Colors.amberAccent[200],
+                  letterSpacing: 2,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 30),
             Row(
@@ -107,7 +113,7 @@ class NinjaCard extends StatelessWidget {
             ),
           ],
         ),
-        ),
+      ),
     );
   }
 }
