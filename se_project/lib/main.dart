@@ -1,14 +1,14 @@
 import 'dart:ui';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
     ));
 
 class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +71,7 @@ class Home extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5)),
                 onPressed: () => {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const signin()))
+                      MaterialPageRoute(builder: (context) => const signup()))
                 },
                 child: const Text(
                   'Get Started',
@@ -87,8 +87,8 @@ class Home extends StatelessWidget {
   }
 }
 
-class signin extends StatelessWidget {
-  const signin({Key? key}) : super(key: key);
+class signup extends StatelessWidget {
+  const signup({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -430,7 +430,7 @@ class login extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8)),
                   onPressed: () => {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const signin()))
+                      MaterialPageRoute(builder: (context) => const signup()))
                   },
                   child: const Text(
                     'Create an account',
@@ -479,7 +479,7 @@ class _myCategories extends State<categories> {
               ),
             ),
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   border: Border(
                       bottom: BorderSide(
                           width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
