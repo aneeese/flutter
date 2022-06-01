@@ -5,9 +5,8 @@ import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: categories(),
-    )
-  );
+      home: Home(),
+    ));
 
 class Home extends StatelessWidget {
   @override
@@ -70,7 +69,10 @@ class Home extends StatelessWidget {
                 color: Colors.black,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
-                onPressed: () => {},
+                onPressed: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const signin()))
+                },
                 child: const Text(
                   'Get Started',
                   style: TextStyle(
@@ -81,8 +83,7 @@ class Home extends StatelessWidget {
               )),
             ],
           ),
-        )
-      );
+        ));
   }
 }
 
@@ -114,7 +115,9 @@ class signin extends StatelessWidget {
               child: Container(
                 alignment: Alignment.topLeft,
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   icon: const Icon(Icons.chevron_left, size: 50),
                   color: Colors.white,
                 ),
@@ -136,8 +139,7 @@ class signin extends StatelessWidget {
                   cursorColor: Colors.white,
                   decoration: const InputDecoration(
                     labelText: 'Name',
-                    labelStyle:
-                        TextStyle(color: Colors.white, fontSize: 20),
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 20),
                     enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white)),
                     focusedBorder: UnderlineInputBorder(
@@ -151,8 +153,7 @@ class signin extends StatelessWidget {
                   cursorColor: Colors.white,
                   decoration: const InputDecoration(
                     labelText: 'Email',
-                    labelStyle:
-                        TextStyle(color: Colors.white, fontSize: 20),
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 20),
                     enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white)),
                     focusedBorder: UnderlineInputBorder(
@@ -166,8 +167,7 @@ class signin extends StatelessWidget {
                   cursorColor: Colors.white,
                   decoration: const InputDecoration(
                     labelText: 'Password',
-                    labelStyle:
-                        TextStyle(color: Colors.white, fontSize: 20),
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 20),
                     enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white)),
                     focusedBorder: UnderlineInputBorder(
@@ -181,8 +181,7 @@ class signin extends StatelessWidget {
                   cursorColor: Colors.white,
                   decoration: const InputDecoration(
                     labelText: 'Confirm Password',
-                    labelStyle:
-                        TextStyle(color: Colors.white, fontSize: 20),
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 20),
                     enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white)),
                     focusedBorder: UnderlineInputBorder(
@@ -190,8 +189,7 @@ class signin extends StatelessWidget {
                   )),
             ),
             Padding(
-                padding:
-                    const EdgeInsets.only(left: 60, top: 585, right: 30),
+                padding: const EdgeInsets.only(left: 60, top: 585, right: 30),
                 child: Container(
                     child: MaterialButton(
                   minWidth: 290,
@@ -199,7 +197,10 @@ class signin extends StatelessWidget {
                   color: Colors.amber[700],
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
-                  onPressed: () => {},
+                  onPressed: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const login()))
+                },
                   child: const Text(
                     'SIGN UP',
                     style: TextStyle(
@@ -253,7 +254,10 @@ class signin extends StatelessWidget {
                   color: Colors.amber[700],
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
-                  onPressed: () => {},
+                  onPressed: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const login()))
+                  },
                   child: const Text(
                     'Already have an account? SIGN IN',
                     style: TextStyle(
@@ -261,9 +265,7 @@ class signin extends StatelessWidget {
                         fontSize: 18,
                         fontWeight: FontWeight.bold),
                   ),
-                )
-              )
-            ),
+                ))),
           ],
         ),
       ),
@@ -309,7 +311,9 @@ class login extends StatelessWidget {
               child: Container(
                 alignment: Alignment.topLeft,
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   icon: const Icon(Icons.chevron_left, size: 50),
                   color: Colors.white,
                 ),
@@ -322,8 +326,7 @@ class login extends StatelessWidget {
                   cursorColor: Colors.white,
                   decoration: const InputDecoration(
                     labelText: 'Email',
-                    labelStyle:
-                        TextStyle(color: Colors.white, fontSize: 20),
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 20),
                     enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white)),
                     focusedBorder: UnderlineInputBorder(
@@ -337,8 +340,7 @@ class login extends StatelessWidget {
                   cursorColor: Colors.white,
                   decoration: const InputDecoration(
                     labelText: 'Password',
-                    labelStyle:
-                        TextStyle(color: Colors.white, fontSize: 20),
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 20),
                     enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white)),
                     focusedBorder: UnderlineInputBorder(
@@ -361,8 +363,7 @@ class login extends StatelessWidget {
                   ),
                 ))),
             Padding(
-                padding:
-                    const EdgeInsets.only(left: 60, top: 585, right: 30),
+                padding: const EdgeInsets.only(left: 60, top: 585, right: 30),
                 child: Container(
                     child: MaterialButton(
                   minWidth: 290,
@@ -370,7 +371,10 @@ class login extends StatelessWidget {
                   color: Colors.amber[700],
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
-                  onPressed: () => {},
+                  onPressed: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => categories()))
+                  },
                   child: const Text(
                     'SIGN IN',
                     style: TextStyle(
@@ -424,7 +428,10 @@ class login extends StatelessWidget {
                   color: Colors.amber[700],
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
-                  onPressed: () => {},
+                  onPressed: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const signin()))
+                  },
                   child: const Text(
                     'Create an account',
                     style: TextStyle(
@@ -432,9 +439,7 @@ class login extends StatelessWidget {
                         fontSize: 18,
                         fontWeight: FontWeight.bold),
                   ),
-                )
-              )
-            ),
+                ))),
           ],
         ),
       ),
@@ -442,42 +447,200 @@ class login extends StatelessWidget {
   }
 }
 
-
 class categories extends StatefulWidget {
   @override
   _myCategories createState() => _myCategories();
 }
+
 class _myCategories extends State<categories> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+      ),
+      drawer: Drawer(
+        backgroundColor: Color.fromARGB(255, 40, 39, 39),
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            Container(
+              padding: EdgeInsets.only(top: 8),
+              height: 100,
+              color: Color.fromARGB(255, 62, 3, 149),
+              child: const DrawerHeader(
+                child: Text(
+                  'Categories',
+                  style: TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 204, 202, 202)),
+                ),
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
+              child: ListTile(
+                title: const Text(
+                  'Suits',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
+              child: ListTile(
+                title: const Text(
+                  'Shirts',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
+              child: ListTile(
+                title: const Text(
+                  'Waistcoat',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
+              child: ListTile(
+                title: const Text(
+                  'Footwears',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
+              child: ListTile(
+                title: const Text(
+                  'Neckwear',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
+              child: ListTile(
+                title: const Text(
+                  'Accessories',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
+              child: ListTile(
+                title: const Text(
+                  'Laptop Covers',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
+              child: ListTile(
+                title: const Text(
+                  'Mobile Covers',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
+              child: ListTile(
+                title: const Text(
+                  'Design Patterns',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
       backgroundColor: Color.fromARGB(255, 24, 18, 42),
       body: Stack(
-        children: <Widget> [
+        children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(0.0),
             child: SizedBox(
-              height: 300,
-              width: 500,
-              child: Image.asset('assets/mainLogo.png', fit: BoxFit.cover)
-            ),
+                height: 200,
+                width: 500,
+                child: Image.asset('assets/mainLogo.png', fit: BoxFit.cover)),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 260),
+            padding: const EdgeInsets.only(top: 200),
             child: SizedBox(
-              height: 620,
-              width: double.infinity,
+              height: 680,
+              width: 600,
               child: Carousel(
-                dotSize: 6,
-                dotSpacing: 15,
-                dotPosition: DotPosition.bottomCenter,
-                images: [
-                  Image.asset('assets/man.png', fit: BoxFit.cover),
-                  Image.asset('assets/woman.png', fit: BoxFit.cover),
-                  Image.asset('assets/accessories.png', fit: BoxFit.cover),
-                  Image.asset('assets/arrivals.png', fit: BoxFit.cover)
-                ]
-              ),
+                  dotSize: 6,
+                  dotSpacing: 15,
+                  dotPosition: DotPosition.bottomCenter,
+                  images: [
+                    Image.asset('assets/man.png', fit: BoxFit.cover),
+                    Image.asset('assets/woman.png', fit: BoxFit.cover),
+                    Image.asset('assets/accessories.png', fit: BoxFit.cover),
+                    Image.asset('assets/arrivals.png', fit: BoxFit.cover)
+                  ]),
             ),
           ),
         ],
