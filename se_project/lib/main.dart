@@ -7,67 +7,6 @@ void main() => runApp(const MaterialApp(
       home: cart(),
     ));
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.amber[700],
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const SizedBox(
-                height: 200,
-                width: 200,
-                child: Image(
-                  image: AssetImage('assets/logo.png'),
-                ),
-              ),
-              const SizedBox(height: 20),
-              const Text(
-                "Welcome to",
-                style: TextStyle(
-                  fontFamily: 'Bitter',
-                  fontSize: 45,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-              const Text(
-                "elysium",
-                style: TextStyle(
-                  fontFamily: 'Baloo Bhai',
-                  fontSize: 44,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 60),
-              MaterialButton(
-                minWidth: 220,
-                height: 50,
-                color: Colors.black,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5)),
-                onPressed: () => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const signup()))
-                },
-                child: const Text(
-                  'Get Started',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ));
-  }
-}
-
 class signup extends StatelessWidget {
   const signup({Key? key}) : super(key: key);
   @override
@@ -351,10 +290,7 @@ class login extends StatelessWidget {
                   color: Colors.amber[700],
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
-                  onPressed: () => {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => categories()))
-                  },
+                  onPressed: () => {},
                   child: const Text(
                     'SIGN IN',
                     style: TextStyle(
@@ -426,7 +362,6 @@ class login extends StatelessWidget {
     );
   }
 }
-
 
 class profile extends StatelessWidget {
   const profile({Key? key}) : super(key: key);
