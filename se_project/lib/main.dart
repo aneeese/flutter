@@ -17,55 +17,36 @@ class Home extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                height: 120,
-                width: 120,
-                //padding: EdgeInsets.only(top: 10),
-                //margin: EdgeInsets.only(left: 80),
-                child: const Image(
+              const SizedBox(
+                height: 200,
+                width: 200,
+                child: Image(
                   image: AssetImage('assets/logo.png'),
-                  //fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(height: 10),
-              Container(
-                height: 110,
-                width: 110,
-                child: const Image(
-                  image: AssetImage('assets/logo1.png'),
-                  //fit: BoxFit.fill,
+              const SizedBox(height: 20),
+              const Text(
+                "Welcome to",
+                style: TextStyle(
+                  fontFamily: 'Bitter',
+                  fontSize: 45,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
-              SizedBox(height: 20),
-              Container(
-                //padding: EdgeInsets.all(1),
-                //margin: EdgeInsets.only(left: 80),
-                child: const Text(
-                  "Welcome to",
-                  style: TextStyle(
-                    fontFamily: 'Bitter',
-                    fontSize: 45,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w400,
-                  ),
+              const Text(
+                "elysium",
+                style: TextStyle(
+                  fontFamily: 'Baloo Bhai',
+                  fontSize: 44,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                child: const Text(
-                  "elysium",
-                  style: TextStyle(
-                    fontFamily: 'Baloo Bhai',
-                    fontSize: 44,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              SizedBox(height: 60),
-              Container(
-                  child: MaterialButton(
-                minWidth: 180,
-                height: 45,
+              const SizedBox(height: 60),
+              MaterialButton(
+                minWidth: 220,
+                height: 50,
                 color: Colors.black,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
@@ -80,7 +61,7 @@ class Home extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
-              )),
+              ),
             ],
           ),
         ));
@@ -198,9 +179,9 @@ class signup extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
                   onPressed: () => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const login()))
-                },
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const login()))
+                  },
                   child: const Text(
                     'SIGN UP',
                     style: TextStyle(
@@ -255,8 +236,8 @@ class signup extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
                   onPressed: () => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const login()))
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const login()))
                   },
                   child: const Text(
                     'Already have an account? SIGN IN',
@@ -349,19 +330,18 @@ class login extends StatelessWidget {
             ),
             Padding(
                 padding: const EdgeInsets.only(left: 15, top: 535),
-                child: Container(
-                    child: MaterialButton(
+                child: MaterialButton(
                   minWidth: 40,
                   height: 50,
                   onPressed: () => {},
                   child: const Text(
-                    'Forgot Password?',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                    ),
+                'Forgot Password?',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                ),
                   ),
-                ))),
+                )),
             Padding(
                 padding: const EdgeInsets.only(left: 60, top: 585, right: 30),
                 child: Container(
@@ -372,8 +352,8 @@ class login extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
                   onPressed: () => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => categories()))
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => categories()))
                   },
                   child: const Text(
                     'SIGN IN',
@@ -421,25 +401,24 @@ class login extends StatelessWidget {
             ),
             Padding(
                 padding: const EdgeInsets.only(top: 770),
-                child: Container(
-                    child: MaterialButton(
+                child: MaterialButton(
                   minWidth: 450,
                   height: 50,
                   color: Colors.amber[700],
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)),
+                  borderRadius: BorderRadius.circular(8)),
                   onPressed: () => {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const signup()))
                   },
                   child: const Text(
-                    'Create an account',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                'Create an account',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
                   ),
-                ))),
+                )),
           ],
         ),
       ),
@@ -458,6 +437,22 @@ class _myCategories extends State<categories> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(right: 220),
+            child: IconButton(
+                onPressed: () {}, icon: const Icon(Icons.search, size: 30)),
+          ),
+          IconButton(
+              onPressed: () => {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const profile()))
+                },
+              icon: const Icon(Icons.account_circle,
+                  color: Colors.amber, size: 30)),
+          IconButton(
+              onPressed: () {}, icon: const Icon(Icons.shopping_cart, size: 30))
+        ],
       ),
       drawer: Drawer(
         backgroundColor: Color.fromARGB(255, 40, 39, 39),
@@ -645,6 +640,259 @@ class _myCategories extends State<categories> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class profile extends StatelessWidget {
+  const profile({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: const Color.fromARGB(255, 24, 18, 42),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 0, top: 50),
+              child: Container(
+                alignment: Alignment.topLeft,
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.chevron_left, size: 50),
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(right: 200, top: 30),
+              child: Text(
+                'My profile',
+                style: TextStyle(
+                fontSize: 30, 
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 247, 245, 245)),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.amber[700]),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18)
+                    )
+                  )
+                ),
+                onPressed: () {},
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget> [
+                    Column(
+                      children: const [
+                        Center(
+                          child: CircleAvatar(
+                            backgroundImage: AssetImage('assets/profile.png'),
+                            radius: 50,
+                          ),
+                        ),
+                        Text('Anees', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),)
+                      ],
+                    ),
+                    const Icon( // <-- Icon
+                      Icons.location_on_outlined,
+                      size: 30.0,
+                      color: Colors.black,
+                    ),
+                    const Text('Hostel City,\nNear Comsats University\nIslamabad',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.black
+                      )
+                    ), // <-- Text
+                    const SizedBox(
+                      width: 50,
+                      height: 150,
+                    ), 
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18)
+                    )
+                  )
+                ),
+                onPressed: () {},
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Text('Edit Profile',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black
+                      )
+                    ), // <-- Text
+                    SizedBox(
+                      width: 185,
+                      height: 60,
+                    ),
+                    Icon( // <-- Icon
+                      Icons.chevron_right,
+                      size: 24.0,
+                      color: Colors.black,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18)
+                    )
+                  )
+                ),
+                onPressed: () {},
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Text('Shopping Address',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black
+                      )
+                    ), // <-- Text
+                    SizedBox(
+                      width: 120,
+                      height: 60,
+                    ),
+                    Icon( // <-- Icon
+                      Icons.chevron_right,
+                      size: 24.0,
+                      color: Colors.black,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18)
+                    )
+                  )
+                ),
+                onPressed: () {},
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Text('Order History',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black
+                      )
+                    ), // <-- Text
+                    SizedBox(
+                      width: 160,
+                      height: 60,
+                    ),
+                    Icon( // <-- Icon
+                      Icons.chevron_right,
+                      size: 24.0,
+                      color: Colors.black,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18)
+                    )
+                  )
+                ),
+                onPressed: () {},
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Text('Cards',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black
+                      )
+                    ), // <-- Text
+                    SizedBox(
+                      width: 225,
+                      height: 60,
+                    ),
+                    Icon( // <-- Icon
+                      Icons.chevron_right,
+                      size: 24.0,
+                      color: Colors.black,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18)
+                    )
+                  )
+                ),
+                onPressed: () {},
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Text('Notifications',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black
+                      )
+                    ), // <-- Text
+                    SizedBox(
+                      width: 163,
+                      height: 60,
+                    ),
+                    Icon( // <-- Icon
+                      Icons.chevron_right,
+                      size: 24.0,
+                      color: Colors.black,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
     );
   }
 }
