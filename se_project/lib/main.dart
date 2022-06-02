@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: cart(),
+      home: signup(),
     ));
 
 class signup extends StatelessWidget {
@@ -290,7 +290,10 @@ class login extends StatelessWidget {
                   color: Colors.amber[700],
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
-                  onPressed: () => {},
+                  onPressed: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const profile()))
+                  },
                   child: const Text(
                     'SIGN IN',
                     style: TextStyle(
@@ -348,8 +351,8 @@ class login extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => const signup()))
                   },
                   child: const Text(
-                'Create an account',
-                style: TextStyle(
+                  'Create an account',
+                  style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold),
@@ -612,102 +615,6 @@ class profile extends StatelessWidget {
             ),
           ],
         ),
-    );
-  }
-}
-
-class cart extends StatelessWidget {
-  const cart({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 24, 18, 42),
-      body: Stack(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(left: 0, top: 50),
-            child: Container(
-              alignment: Alignment.topLeft,
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: const Icon(Icons.chevron_left, size: 50),
-                color: Colors.white,
-              ),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 175, top: 63),
-            child: Text('Cart', 
-            style: TextStyle(
-              fontSize: 34,
-              color: Colors.white,
-              fontWeight: FontWeight.bold
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 360, top: 60),
-            child: Container(
-              alignment: Alignment.topLeft,
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: const Icon(Icons.delete_outline, size: 35),
-                color: Colors.red,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 40, top: 130),
-            child: ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.amber[700]),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18)
-                  )
-                )
-              ),
-              onPressed: () {},
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: const [
-                  Icon( // <-- Icon
-                    Icons.notifications_active_outlined,
-                    size: 28.0,
-                    color: Colors.white,
-                  ),
-                  Text(' FREE Delivery until the end of the month',
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.white
-                    )
-                  ), // <-- Text
-                  SizedBox(
-                    width: 0,
-                    height: 35,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 0, top: 200),
-            child: SizedBox(
-              width: 350,
-              height: 350,
-              child: Image.asset(
-                "assets/emptyCart.png",
-                colorBlendMode: BlendMode.saturation,
-                fit: BoxFit.cover,
-              ),
-            )
-          )
-        ],
-      )
     );
   }
 }
