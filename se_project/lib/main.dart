@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: cart(),
     ));
 
 class Home extends StatelessWidget {
@@ -418,7 +418,8 @@ class login extends StatelessWidget {
                     fontSize: 18,
                     fontWeight: FontWeight.bold),
                   ),
-                )),
+                )
+          ),
           ],
         ),
       ),
@@ -426,223 +427,6 @@ class login extends StatelessWidget {
   }
 }
 
-class categories extends StatefulWidget {
-  @override
-  _myCategories createState() => _myCategories();
-}
-
-class _myCategories extends State<categories> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
-        actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(right: 220),
-            child: IconButton(
-                onPressed: () {}, icon: const Icon(Icons.search, size: 30)),
-          ),
-          IconButton(
-              onPressed: () => {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const profile()))
-                },
-              icon: const Icon(Icons.account_circle,
-                  color: Colors.amber, size: 30)),
-          IconButton(
-              onPressed: () {}, icon: const Icon(Icons.shopping_cart, size: 30))
-        ],
-      ),
-      drawer: Drawer(
-        backgroundColor: Color.fromARGB(255, 40, 39, 39),
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            Container(
-              padding: EdgeInsets.only(top: 8),
-              height: 100,
-              color: Color.fromARGB(255, 62, 3, 149),
-              child: const DrawerHeader(
-                child: Text(
-                  'Categories',
-                  style: TextStyle(
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 204, 202, 202)),
-                ),
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(
-                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
-              child: ListTile(
-                title: const Text(
-                  'Suits',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(
-                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
-              child: ListTile(
-                title: const Text(
-                  'Shirts',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(
-                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
-              child: ListTile(
-                title: const Text(
-                  'Waistcoat',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(
-                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
-              child: ListTile(
-                title: const Text(
-                  'Footwears',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(
-                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
-              child: ListTile(
-                title: const Text(
-                  'Neckwear',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(
-                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
-              child: ListTile(
-                title: const Text(
-                  'Accessories',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(
-                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
-              child: ListTile(
-                title: const Text(
-                  'Laptop Covers',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(
-                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
-              child: ListTile(
-                title: const Text(
-                  'Mobile Covers',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(
-                          width: 2.0, color: Color.fromARGB(255, 62, 3, 149)))),
-              child: ListTile(
-                title: const Text(
-                  'Design Patterns',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ),
-          ],
-        ),
-      ),
-      backgroundColor: Color.fromARGB(255, 24, 18, 42),
-      body: Stack(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(0.0),
-            child: SizedBox(
-                height: 200,
-                width: 500,
-                child: Image.asset('assets/mainLogo.png', fit: BoxFit.cover)),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 200),
-            child: SizedBox(
-              height: 680,
-              width: 600,
-              child: Carousel(
-                  dotSize: 6,
-                  dotSpacing: 15,
-                  dotPosition: DotPosition.bottomCenter,
-                  images: [
-                    Image.asset('assets/man.png', fit: BoxFit.cover),
-                    Image.asset('assets/woman.png', fit: BoxFit.cover),
-                    Image.asset('assets/accessories.png', fit: BoxFit.cover),
-                    Image.asset('assets/arrivals.png', fit: BoxFit.cover)
-                  ]),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 class profile extends StatelessWidget {
   const profile({Key? key}) : super(key: key);
@@ -893,6 +677,102 @@ class profile extends StatelessWidget {
             ),
           ],
         ),
+    );
+  }
+}
+
+class cart extends StatelessWidget {
+  const cart({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 24, 18, 42),
+      body: Stack(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(left: 0, top: 50),
+            child: Container(
+              alignment: Alignment.topLeft,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.chevron_left, size: 50),
+                color: Colors.white,
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 175, top: 63),
+            child: Text('Cart', 
+            style: TextStyle(
+              fontSize: 34,
+              color: Colors.white,
+              fontWeight: FontWeight.bold
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 360, top: 60),
+            child: Container(
+              alignment: Alignment.topLeft,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.delete_outline, size: 35),
+                color: Colors.red,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 40, top: 130),
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.amber[700]),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18)
+                  )
+                )
+              ),
+              onPressed: () {},
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Icon( // <-- Icon
+                    Icons.notifications_active_outlined,
+                    size: 28.0,
+                    color: Colors.white,
+                  ),
+                  Text(' FREE Delivery until the end of the month',
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.white
+                    )
+                  ), // <-- Text
+                  SizedBox(
+                    width: 0,
+                    height: 35,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 0, top: 200),
+            child: SizedBox(
+              width: 350,
+              height: 350,
+              child: Image.asset(
+                "assets/emptyCart.png",
+                colorBlendMode: BlendMode.saturation,
+                fit: BoxFit.cover,
+              ),
+            )
+          )
+        ],
+      )
     );
   }
 }
