@@ -42,7 +42,7 @@ class signup extends StatelessWidget {
               child: Text('Create\nAccount',
                 style: TextStyle(
                   color: Colors.white,
-                  fontFamily: 'Roboto',
+                  fontFamily: 'Raleway',
                   fontSize: 40,
                   fontWeight: FontWeight.bold
                 )
@@ -51,11 +51,11 @@ class signup extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 30, top: 240, right: 30),
               child: TextFormField(
-                style: const TextStyle(color: Colors.white, fontSize: 16),
+                style: const TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),
                 cursorColor: Colors.white,
                 decoration: const InputDecoration(
                   labelText: 'Name',
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 20),
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 16),
                   enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                   focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                 )
@@ -64,11 +64,11 @@ class signup extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 30, top: 320, right: 30),
               child: TextFormField(
-                style: const TextStyle(color: Colors.white, fontSize: 16),
+                style: const TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),
                 cursorColor: Colors.white,
                 decoration: const InputDecoration(
                   labelText: 'Email',
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 20),
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 16),
                   enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                   focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                 )
@@ -77,11 +77,11 @@ class signup extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 30, top: 400, right: 30),
               child: TextFormField(
-                style: const TextStyle(color: Colors.white, fontSize: 16),
+                style: const TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),
                 cursorColor: Colors.white,
                 decoration: const InputDecoration(
                   labelText: 'Password',
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 20),
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 16),
                   enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                   focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                 )
@@ -90,11 +90,11 @@ class signup extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 30, top: 480, right: 30),
               child: TextFormField(
-                style: const TextStyle(color: Colors.white, fontSize: 16),
+                style: const TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),
                 cursorColor: Colors.white,
                 decoration: const InputDecoration(
                   labelText: 'Confirm Password',
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 20),
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 16),
                   enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                   focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                 )
@@ -115,6 +115,7 @@ class signup extends StatelessWidget {
                 child: const Text('SIGN UP',
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'Raleway',
                     fontSize: 18,
                     fontWeight: FontWeight.bold),
                   ),
@@ -171,6 +172,7 @@ class signup extends StatelessWidget {
                 },
                 child: const Text('Already have an account? SIGN IN',
                   style: TextStyle(
+                    fontFamily: 'Raleway',
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold),

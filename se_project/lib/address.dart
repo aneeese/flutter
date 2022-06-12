@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:se_project/addAddress.dart';
+import 'package:se_project/editAddress.dart';
 
 class address extends StatelessWidget {
   const address({Key? key}) : super(key: key);
@@ -27,9 +29,9 @@ class address extends StatelessWidget {
               child: Container(
                 alignment: Alignment.topLeft,
                 child: IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
+                  onPressed: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const addAddress()))
+                  }, 
                   icon: const Icon(Icons.add, size: 33),
                   color: Colors.white,
                 ),
@@ -59,7 +61,7 @@ class address extends StatelessWidget {
                       child: Text("Muhammad Anees",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20,
+                          fontSize: 22,
                           fontFamily: 'Raleway',
                           fontWeight: FontWeight.w600
                         ),
@@ -70,7 +72,7 @@ class address extends StatelessWidget {
                       child: Text("Pearl Boys Hostel, Hostel City, Park Road,\nIslamabad.",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 17,
                           fontFamily: 'Raleway',
                           fontWeight: FontWeight.w600
                         ),
@@ -81,7 +83,7 @@ class address extends StatelessWidget {
                       child: Text("+923015316416",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 17,
                           fontFamily: 'Raleway',
                           fontWeight: FontWeight.w600
                         ),
@@ -94,7 +96,9 @@ class address extends StatelessWidget {
                         height: 50,
                         color: Colors.amber[700],
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                        onPressed: (){},
+                        onPressed: () => {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const editAddress()))
+                        }, 
                         child: const Text('Edit',
                           style: TextStyle(
                             fontFamily: 'Raleway',

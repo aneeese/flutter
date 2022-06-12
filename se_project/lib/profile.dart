@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:se_project/address.dart';
 
 class profile extends StatelessWidget {
   const profile({Key? key}) : super(key: key);
@@ -27,6 +28,7 @@ class profile extends StatelessWidget {
             child: Text('My profile',
               style: TextStyle(
                 fontSize: 30,
+                fontFamily: 'Raleway',
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 247, 245, 245)
               ),
@@ -52,6 +54,7 @@ class profile extends StatelessWidget {
                       Text('Anees',
                         style: TextStyle(
                           fontSize: 20,
+                          fontFamily: 'Raleway',
                           color: Colors.black,
                           fontWeight: FontWeight.bold),
                       )
@@ -63,7 +66,7 @@ class profile extends StatelessWidget {
                     color: Colors.black,
                   ),
                   const Text('Hostel City,\nNear Comsats University\nIslamabad',
-                    style: TextStyle(fontSize: 16, color: Colors.black)
+                    style: TextStyle(fontSize: 16, color: Colors.black, fontFamily: 'Raleway', fontWeight: FontWeight.w600)
                   ),
                   const SizedBox(
                     width: 50,
@@ -83,7 +86,7 @@ class profile extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: const [
                   Text('Edit Profile',
-                    style: TextStyle(fontSize: 18, color: Colors.black)
+                    style: TextStyle(fontFamily: 'Raleway', fontSize: 18, color: Colors.black, fontWeight: FontWeight.w600)
                   ),
                   SizedBox(
                     width: 185,
@@ -104,14 +107,17 @@ class profile extends StatelessWidget {
               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.white),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18)))),
-              onPressed: () {},
+              onPressed: () => {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const address()))
+              }, 
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: const [
                   Text('Shopping Address',
-                    style: TextStyle(fontSize: 18, color: Colors.black)),                  SizedBox(
-                    width: 120,
-                    height: 60,
+                    style: TextStyle(fontFamily: 'Raleway', fontSize: 18, color: Colors.black, fontWeight: FontWeight.w600)),
+                    SizedBox(
+                      width: 120,
+                      height: 60,
                   ),
                   Icon(
                     Icons.chevron_right,
@@ -133,7 +139,7 @@ class profile extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: const [
                   Text('Order History',
-                    style: TextStyle(fontSize: 18, color: Colors.black)
+                    style: TextStyle(fontFamily: 'Raleway', fontSize: 18, color: Colors.black, fontWeight: FontWeight.w600)
                   ),
                   SizedBox(
                     width: 160,
@@ -159,7 +165,7 @@ class profile extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: const [
                   Text('Cards',
-                    style: TextStyle(fontSize: 18, color: Colors.black)
+                    style: TextStyle(fontFamily: 'Raleway', fontSize: 18, color: Colors.black, fontWeight: FontWeight.w600)
                   ),
                   SizedBox(
                     width: 225,
@@ -185,7 +191,7 @@ class profile extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: const [
                   Text('Notifications',
-                    style: TextStyle(fontSize: 18, color: Colors.black)
+                    style: TextStyle(fontFamily: 'Raleway', fontSize: 18, color: Colors.black, fontWeight: FontWeight.w600)
                   ),
                   SizedBox(
                     width: 163,

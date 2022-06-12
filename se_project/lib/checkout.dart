@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:se_project/address.dart';
+import 'package:se_project/payment.dart';
 
 class checkout extends StatelessWidget {
   const checkout({Key? key}) : super(key: key);
@@ -47,7 +49,9 @@ class checkout extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 140, left: 320),
             child: GestureDetector(
-              onTap: (() {}),
+              onTap: () => {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const address()))
+              },
               child: const Text('Change',
               style: TextStyle(
                 fontFamily: 'Raleway',
@@ -238,7 +242,9 @@ class checkout extends StatelessWidget {
               height: 50,
               color: Colors.amber[700],
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-              onPressed: (){},
+              onPressed: () => {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const PaymentScreen()))
+              },
               child: const Text('Confirm and Pay',
                 style: TextStyle(
                   fontFamily: 'Raleway',

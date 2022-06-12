@@ -211,7 +211,9 @@ class addAddress extends StatelessWidget {
                 height: 50,
                 color: Colors.amber[700],
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                onPressed: (){},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 child: const Text('Add Address',
                 style: TextStyle(
                   fontFamily: 'Raleway',

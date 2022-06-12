@@ -217,8 +217,8 @@ class editAddress extends StatelessWidget {
                     focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(5.0)), borderSide: BorderSide(color: Colors.white)),
                     enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                   )
-              ),
                 ),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 60, top: 840, bottom: 20),
@@ -227,7 +227,9 @@ class editAddress extends StatelessWidget {
                 height: 50,
                 color: Colors.amber[700],
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                onPressed: (){},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 child: const Text('Save',
                   style: TextStyle(
                     fontFamily: 'Raleway',

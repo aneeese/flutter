@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:se_project/categories.dart';
 import 'package:se_project/signup.dart';
 
 class login extends StatelessWidget {
@@ -31,7 +32,7 @@ class login extends StatelessWidget {
               child: Text('Welcome\nBack',
                 style: TextStyle(
                   color: Colors.white,
-                  fontFamily: 'Roboto',
+                  fontFamily: 'Raleway',
                   fontSize: 36,
                   fontWeight: FontWeight.bold
                 )
@@ -53,11 +54,11 @@ class login extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 30, top: 400, right: 30),
               child: TextFormField(
-                style: const TextStyle(color: Colors.white, fontSize: 16),
+                style: const TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),
                 cursorColor: Colors.white,
                 decoration: const InputDecoration(
                   labelText: 'Email',
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 20),
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 16),
                   enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                   focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                 )
@@ -66,11 +67,11 @@ class login extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 30, top: 480, right: 30),
               child: TextFormField(
-                style: const TextStyle(color: Colors.white, fontSize: 16),
+                style: const TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),
                 cursorColor: Colors.white,
                 decoration: const InputDecoration(
                   labelText: 'Password',
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 20),
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 16),
                   enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                   focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                 )
@@ -84,8 +85,10 @@ class login extends StatelessWidget {
                 onPressed: () => {},
                 child: const Text('Forgot Password?',
                   style: TextStyle(
+                    fontFamily: 'Raleway',
                     color: Colors.white,
                     fontSize: 14,
+                    fontWeight: FontWeight.w600
                   ),
                 ),
               )
@@ -98,9 +101,13 @@ class login extends StatelessWidget {
                 height: 50,
                 color: Colors.amber[700],
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                onPressed: (){},
+                onPressed: () => {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => categories()))
+                },
                 child: const Text('SIGN IN',
                   style: TextStyle(
+                    fontFamily: 'Raleway',
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold),
@@ -155,6 +162,7 @@ class login extends StatelessWidget {
                 },
                 child: const Text('Create an account',
                   style: TextStyle(
+                    fontFamily: 'Raleway',
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold

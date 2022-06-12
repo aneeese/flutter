@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:se_project/confirm.dart';
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({Key? key}) : super(key: key);
   @override
@@ -25,7 +26,12 @@ class _PaymentScreenState extends State<PaymentScreen> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Color.fromARGB(255, 24, 18, 42),
-        leading: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 250, 250, 250)),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 250, 250, 250))
+        ),
       ),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -182,17 +188,19 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 ),
                 const SizedBox(height: 50.0),
                 GestureDetector(
-                  onTap: (){},
+                  onTap: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const confirm()))
+                  },
                   child: Container(
-                      height: 50.0,
-                      width: size.width,
-                      decoration: BoxDecoration(
-                          color: Colors.amber[700],
-                          borderRadius: BorderRadius.all(Radius.circular(10.0))
-                      ),
-                      child: const Center(
-                        child: Text('Confirm', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontWeight: FontWeight.w700, fontSize: 18.0)),
-                      )
+                    height: 50.0,
+                    width: size.width,
+                    decoration: BoxDecoration(
+                        color: Colors.amber[700],
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))
+                    ),
+                    child: const Center(
+                      child: Text('Confirm', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontWeight: FontWeight.w700, fontSize: 18.0)),
+                    )
                   ),
                 ),
               ],
