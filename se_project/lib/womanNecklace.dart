@@ -50,7 +50,7 @@ class womenNecklace extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 30, top: 370),
+          padding: const EdgeInsets.only(left: 30, top: 380),
           child: Container(
             child: MaterialButton(
             minWidth: 40,
@@ -68,47 +68,41 @@ class womenNecklace extends StatelessWidget {
           )
         ),
         const Padding(
-          padding: EdgeInsets.only(left: 30, top: 435),
+          padding: EdgeInsets.only(left: 30, top: 445),
           child: Text("Women necklace",
             style: TextStyle(
               color: Colors.white,
               fontSize: 28,
               fontFamily: 'Raleway',
-              fontWeight: FontWeight.w600
+              fontWeight: FontWeight.w700
             ),
           ),
         ),
         const Padding(
-          padding: EdgeInsets.only(left: 30, top: 480),
-          child: Text("Colors",
+          padding: EdgeInsets.only(left: 30, top: 490),
+          child: Text("Description",
             style: TextStyle(
-              color: Colors.white,
+              color: Color.fromARGB(255, 16, 218, 51),
               fontSize: 22,
               fontFamily: 'Raleway',
-              fontWeight: FontWeight.w500),
+              fontWeight: FontWeight.w600),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 30, top: 520),
+          padding: const EdgeInsets.only(left: 30, top: 530),
           child: Container(
-            child: MaterialButton(
-            minWidth: 40,
-            height: 45,
-            color: Color.fromARGB(255, 239, 197, 71),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            onPressed: () => {},
-            child: const Text('Golden',
+            child: const Text('This is a round locket necklace with lacy floral etched designs! This is a romantic\nand timeless necklace that is exquisite\nin its simplicity! This locket is beautifully\ndetailed in antique gold brass.',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 18,
                 fontFamily: 'Raleway',
-                fontWeight: FontWeight.bold),
+                fontWeight: FontWeight.w600
               ),
-            )
+            ),
           )
         ),
         Padding(
-          padding: EdgeInsets.only(left: 30, top: 690),
+          padding: EdgeInsets.only(left: 30, top: 655),
           child: RichText(
             textAlign: TextAlign.left,
             text: const TextSpan(children: <TextSpan>[
@@ -118,11 +112,11 @@ class womenNecklace extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 19,
                   fontFamily: 'Raleway',
-                  fontWeight: FontWeight.w400
+                  fontWeight: FontWeight.w600
                 )
               ),
               TextSpan(
-                text: "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t3999 Rs",
+                text: "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t3999 Rs",
                 style: TextStyle(
                   color: Color.fromARGB(255, 16, 218, 51),
                   fontSize: 23,
@@ -135,7 +129,7 @@ class womenNecklace extends StatelessWidget {
           )
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 60, top: 735),
+          padding: const EdgeInsets.only(left: 60, top: 715),
           child: Container(
             child: MaterialButton(
               minWidth: 290,

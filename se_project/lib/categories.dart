@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:se_project/checkout.dart';
-import 'package:se_project/iPhoneCover.dart';
 import 'package:se_project/locket.dart';
 import 'package:se_project/profile.dart';
 import 'package:se_project/womanNecklace.dart';
@@ -306,9 +305,7 @@ class _myCategories extends State<categories> {
                 height: 480,
                 width: 400,
                 child: GestureDetector(
-                  onTap: () => {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const iPhoneCover()))
-                  },
+                  onTap: () => {},
                   child: Image.asset('assets/iphone13-.jpg', fit: BoxFit.cover)
                 ),
               ),
